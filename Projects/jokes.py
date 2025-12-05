@@ -1,0 +1,6 @@
+print("What do you call fake spaghetti?")
+input("")
+print("An impasta!")
+print("Why did the tomato turn red?")
+input("")
+print("Because it saw the salad dressing!")
