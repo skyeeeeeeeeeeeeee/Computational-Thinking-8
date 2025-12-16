@@ -1,0 +1,8 @@
+answer1 = input("Practice is over,where do you want to go?")
+if answer1 == "To go get food":
+
+    answer2 = input ("Go straight home?")
+    if answer2 == "Yes":
+        print ("Home we go!")
+    if answer2 == "No":
+        print ("Lets go feed our tummies!")
