@@ -12,18 +12,31 @@ moneycoins=10
 
 
 # Section 2 - controls
+# Aura points go up one while money goes up ten but you need to keep money over 25 in order for aura point to continue going up
 # TODO - define an action. ex: def my_control()
-def aura_points():
-    global aura_points
-    aura_points +=1
-
-# TODO - choose a key to do the action. ex: window.onkeypress(my_control, "space")
-window.onkeypress(aura_points, "space")
-
-# TODO - make a second control
-def get_your_money_up():
+def get_aura_points():
+    global aura_points, moneycoins
+    if moneycoins <25: 
+        aura_points -= 5
+    elif moneycoins >25:
+        aura_points +=1
+        x = random.randint(-400,200)
+        y = random.randint(-200,250)
+        create_sprite("aura points",x,y)
+def get_moneycoins():
     global moneycoins
-    moneycoins +=5
+    moneycoins +=10 
+    x = random.randint(-400,200)
+    y = random.randint(-200,250)
+    create_sprite("moneycoins",x,y)
+
+# TODO - choose a key to do the action. ex: window.onkeypress(my_control, "space") 
+# TODO - make a second control
+#Everytime your press space key you get aura points but in order for your aura points to keep going up you need at least 25 money and you get money by pressing the "m" key
+window.onkeypress(get_aura_points, "space")
+window.onkeypress(get_moneycoins, "m")
+
+
 
 
 
