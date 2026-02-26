@@ -12,7 +12,7 @@ moneycoins=10
 
 
 # Section 2 - controls
-# Aura points go up one while money goes up ten but you need to keep money over 25 in order for aura point to continue going up
+# Aura points go up one while money goes up ten but you need to keep money over 25 in order for aura point to continue going up and each money sprite is worth 10
 # TODO - define an action. ex: def my_control()
 def get_aura_points():
     global aura_points, moneycoins
@@ -20,14 +20,14 @@ def get_aura_points():
         aura_points -= 5
     elif moneycoins >25:
         aura_points +=1
-        x = random.randint(-400,200)
-        y = random.randint(-200,250)
+        x = random.randint(-400,300)
+        y = random.randint(-200,300)
         create_sprite("aura points",x,y)
 def get_moneycoins():
     global moneycoins
     moneycoins +=10 
-    x = random.randint(-400,200)
-    y = random.randint(-200,250)
+    x = random.randint(-400,300)
+    y = random.randint(-200,300)
     create_sprite("moneycoins",x,y)
 
 # TODO - choose a key to do the action. ex: window.onkeypress(my_control, "space") 
