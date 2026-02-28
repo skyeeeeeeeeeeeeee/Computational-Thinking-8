@@ -97,7 +97,7 @@ for i in range(10000000000):
             future_tags += 1
             who_is_it = "coolguydrizzy"
 
-    if i >= 30 * 100:
+    if i >= 50* 100:
         break
 
     # TODO - add code for automatic actions
